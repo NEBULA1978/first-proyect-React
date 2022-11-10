@@ -1,0 +1,46 @@
+en package.json en "scripts: tenemos tres opciones
+dev nos sirve para arrancar el servidor de desarrollo
+build: para generar la version de produccion
+preview: estar seguros que el compilado de profuccion funciona de verdad
+
+
+para importar css la mas utilizada es import
+venimos al main.jsx y hacemos  import "./index.css";
+es posible con import porque tenemos un empaquetador detras 
+que procesa todos estos imports y sabe como manejarlos
+es la forma mas habitual con react ,ya que los componentes 
+pueden dividir no solo su logica y su aparienciavisual 
+sino tambien sus propias hojas de estilo para tenerlo
+todo completamente modularizado e  importar todas las 
+hojas de estilo justo donde se requieran y poder asi 
+asegurarnos de que cada componente tiene sus propios estilos
+y que importando un componente, tambien importamos su css 
+
+eb el navegador ponemos http://localhost:3000/src/logo.svg y tenemos 
+acceso al la foto
+
+tenemos que entender la prioridad de este servidor:
+la prioridad del servidor es buscr siempre activos estaticos
+es decir si existe algun archivo estatico que coincidada con
+alguna ruta lo devolvera sobre cualquier cosa, y solo en el caso 
+que se encuentre una ruta: localhost:3000/asd que no coincida 
+con ningun archivo lo interpretara como una pagina y no como
+un archivo estatico y en este caso como e todas las paginas
+nos devuelve el index.html 
+
+si termina en un localhost:3000/asd.ase :
+en este caso el servidor interpreta por si estamos buscando un
+ archivo estatico   porque termina en una extension de archivo localhost:3000/asd.ase
+
+ como breve resumen:
+ 1º buscamos archivo estatico y si no lo encontramos que acaba en una extendion
+ devolvemos un not found y si no acaba con una extension lo interpretamos como una 
+ pagina y devolvemos index.html, pero a mayores de esto si existe una carpeta public
+ donde unicamente debemos ubicar archivos estaticos,cualquier archivo estatico queesxista
+ dentro de esta carpeta ,si creo asd dentro de public sera tratado como si public fuera 
+ el directorio raiz y tendra prioridad sobre todos los demas  IMPORTANT
+
+ 
+
+entonces con vite tenemos 2 opciones en desarrollo no vanderizamos 
+pero en produccion si
